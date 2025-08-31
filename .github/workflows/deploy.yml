@@ -17,32 +17,63 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
-          cache: 'pnpm'  # 明确使用pnpm缓存，对应pnpm-lock.yaml
 
-      # 检查pnpm-lock.yaml是否存在（确保依赖锁文件有效）
-      - name: Verify pnpm lock file exists
+      # 关键改进：使用pnpm官方安装脚本，强制安装并获取绝对路径
+      - name: Install pnpm with official script
+        run: |
+          # 下载并执行官方安装脚本
+          curl -fsSL https://get.pnpm.io/install.sh | sh -
+          
+          # 显示pnpm安装路径（通常在~/.local/share/pnpm/pnpm）
+          echo "PNPM installation path:"
+          which pnpm
+          
+          # 强制将pnpm路径添加到环境变量
+          echo "export PATH=\$HOME/.local/share/pnpm:\$PATH" >> ~/.bashrc
+          source ~/.bashrc
+          
+          # 验证安装是否成功
+          echo "pnpm version:"
+          pnpm --version || echo "pnpm still not found"
+          
+          # 记录pnpm的绝对路径（用于后续步骤直接调用）
+          echo "PNPM_EXE=$(which pnpm)" >> $GITHUB_ENV
+
+      # 验证环境变量中的pnpm路径
+      - name: Verify pnpm path
+        run: |
+          echo "PNPM_EXE: $PNPM_EXE"
+          if [ -z "$PNPM_EXE" ]; then
+            echo "Error: PNPM_EXE is not set"
+            exit 1
+          fi
+          if [ ! -f "$PNPM_EXE" ]; then
+            echo "Error: pnpm executable not found at $PNPM_EXE"
+            exit 1
+          fi
+          # 确认文件可执行
+          chmod +x "$PNPM_EXE"
+          "$PNPM_EXE" --version
+
+      # 检查锁文件
+      - name: Verify pnpm lock file
         run: |
           if [ ! -f "pnpm-lock.yaml" ]; then
-            echo "Error: pnpm-lock.yaml not found. Please run 'pnpm install' locally to generate it."
+            echo "Error: pnpm-lock.yaml not found. Generate it with 'pnpm install' locally first."
             exit 1
           fi
 
-      # 通过npm安装pnpm（确保环境可用）
-      - name: Install pnpm via npm
-        run: |
-          npm install -g pnpm
-          pnpm --version
+      # 使用绝对路径安装依赖
+      - name: Install dependencies with absolute path
+        run: "$PNPM_EXE install"
 
-      - name: Install dependencies
-        run: pnpm install
+      # 使用绝对路径构建项目
+      - name: Build with absolute path
+        run: "$PNPM_EXE run build"
 
-      - name: Build Fuwari site
-        run: pnpm run build
-
-      - name: Setup SSH key for Pages-Repo
+      - name: Setup SSH key
         uses: webfactory/ssh-agent@v0.5.4
         with:
-          # VS Code提示"DEPLOY_KEY无效"是正常的（本地无此变量），不影响实际运行
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Deploy to Pages-Repo
@@ -54,6 +85,6 @@ jobs:
           git remote add origin git@github.com:DerckHanna/Pages-Repo.git
           git checkout -b gh-pages
           git add .
-          git commit -m "Auto deploy from ForestBlog-Source: $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Auto deploy: $(date +'%Y-%m-%d %H:%M:%S')"
           git push -f origin gh-pages
     
