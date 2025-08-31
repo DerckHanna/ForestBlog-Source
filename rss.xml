@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>try_one</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/try_one/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/try_one/</guid><pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在改了在改了&lt;/p&gt;
+</content:encoded></item><item><title>Markdown 扩展功能</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/markdown-extended/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/markdown-extended/</guid><description>了解更多关于 Fuwari 中的 Markdown 功能</description><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;GitHub 仓库卡片&lt;/h2&gt;
+&lt;p&gt;您可以添加动态卡片链接到 GitHub 仓库，页面加载时，仓库信息会从 GitHub API 获取。&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;Fabrizz/MMM-OnSpotify&quot;}&lt;/p&gt;
+&lt;p&gt;使用代码 &lt;code&gt;::github{repo=&quot;&amp;lt;所有者&amp;gt;/&amp;lt;仓库名&amp;gt;&quot;}&lt;/code&gt; 创建 GitHub 仓库卡片。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;::github{repo=&quot;saicaca/fuwari&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;警示框 (Admonitions)&lt;/h2&gt;
+&lt;p&gt;支持以下类型的警示框: &lt;code&gt;note(备注)&lt;/code&gt; &lt;code&gt;tip(提示)&lt;/code&gt; &lt;code&gt;important(重要)&lt;/code&gt; &lt;code&gt;warning(警告)&lt;/code&gt; &lt;code&gt;caution(注意)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;:::note
+突出显示用户应该注意的信息，即使在快速浏览时也是如此。
+:::&lt;/p&gt;
+&lt;p&gt;:::tip
+辅助用户更好行动的可选信息。
+:::&lt;/p&gt;
+&lt;p&gt;:::important
+用户所需的关键信息。
+:::&lt;/p&gt;
+&lt;p&gt;:::warning
+由于潜在风险而需要用户立即关注的关键内容。
+:::&lt;/p&gt;
+&lt;p&gt;:::caution
+某个行动可能带来的负面后果。
+:::&lt;/p&gt;
+&lt;h3&gt;基本语法&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;:::note
+Highlights information that users should take into account, even when skimming.
+:::
+
+:::tip
+Optional information to help a user be more successful.
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;自定义标题&lt;/h3&gt;
+&lt;p&gt;可以自定义警示框的标题。&lt;/p&gt;
+&lt;p&gt;:::note[我的自定义标题]
+这是一个带有自定义标题的备注。
+:::&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::note[MY CUSTOM TITLE]
+This is a note with a custom title.
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;GitHub 语法&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+&lt;a href=&quot;https://github.com/orgs/community/discussions/16925&quot;&gt;GitHub 语法&lt;/a&gt; 也受支持.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; [!NOTE]
+&amp;gt; GitHub 语法也受支持。
+
+&amp;gt; [!TIP]
+&amp;gt; GitHub 语法也受支持。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;隐藏内容 (Spoiler)&lt;/h3&gt;
+&lt;p&gt;您可以在文本中添加隐藏内容。该内容也支持 &lt;strong&gt;Markdown&lt;/strong&gt; 语法.&lt;/p&gt;
+&lt;p&gt;这个内容 : spoiler [ 是隐藏的 &lt;strong&gt;哈哈&lt;/strong&gt; ] !&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+The content : spoiler[is hidden **ayyy**]!
+// 孩子们，这个功能似乎用不了
+
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Expressive Code 代码展示示例</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/expressive-code/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/expressive-code/</guid><description>使用 Expressive Code 在 Markdown 中展示代码块的效果</description><pubDate>Wed, 10 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在这里，我们将探索使用 &lt;a href=&quot;https://expressive-code.com/&quot;&gt;Expressive Code&lt;/a&gt; 的代码块显示效果。提供的示例基于官方文档，您可以参考获取更多详细信息。&lt;/p&gt;
+&lt;h2&gt;Expressive Code 功能&lt;/h2&gt;
+&lt;h3&gt;语法高亮&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/key-features/syntax-highlighting/&quot;&gt;语法高亮&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;常规语法高亮&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;console.log(&apos;这段代码有语法高亮效果!&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;渲染 ANSI 转义序列&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;ANSI 颜色：
+- 常规：[31m红色[0m [32m绿色[0m [33m黄色[0m [34m蓝色[0m [35m洋红色[0m [36m青色[0m
+- 粗体：[1;31m红色[0m [1;32m绿色[0m [1;33m黄色[0m [1;34m蓝色[0m [1;35m洋红色[0m [1;36m青色[0m
+- 暗淡：[2;31m红色[0m [2;32m绿色[0m [2;33m黄色[0m [2;34m蓝色[0m [2;35m洋红色[0m [2;36m青色[0m
+
+256 色（显示颜色 160-177）：
+[38;5;160m160 [38;5;161m161 [38;5;162m162 [38;5;163m163 [38;5;164m164 [38;5;165m165[0m
+[38;5;166m166 [38;5;167m167 [38;5;168m168 [38;5;169m169 [38;5;170m170 [38;5;171m171[0m
+[38;5;172m172 [38;5;173m173 [38;5;174m174 [38;5;175m175 [38;5;176m176 [38;5;177m177[0m
+
+全 RGB 颜色：
+[38;2;34;139;34m森林绿 - RGB(34, 139, 34)[0m
+
+文本格式：[1m粗体[0m [2m暗淡[0m [3m斜体[0m [4m下划线[0m
+
+格式是: [ 配置 内容  [ 0m
+[3m实际使用的时候将上面的文本连在一起[0m
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;编辑器与终端框架&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/key-features/frames/&quot;&gt;编辑器与终端框架&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;代码编辑器框架&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;console.log(&apos;标题属性示例&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- src/content/index.html --&amp;gt;
+&amp;lt;div&amp;gt;文件名注释示例&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;终端框架&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;echo &quot;这个终端框架没有标题&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;Write-Output &quot;这个有标题!&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;覆盖框架类型&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;echo &quot;看，没有框架!&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;# 如果不覆盖，这应该是一个终端框架
+function Watch-Tail { Get-Content -Tail 20 -Wait $args }
+New-Alias tail Watch-Tail
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;文本与行标记&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/key-features/text-markers/&quot;&gt;文本与行标记&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;标记整行和行范围js {1, 4, 7-8}&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;// 第 1 行 - 通过行号标记
+// 第 2 行
+// 第 3 行
+// 第 4 行 - 通过行号标记
+// 第 5 行
+// 第 6 行
+// 第 7 行 - 通过范围 &quot;7-8&quot; 标记
+// 第 8 行 - 通过范围 &quot;7-8&quot; 标记
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;选择行标记类型 (mark, ins, del)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;function demo() {
+  console.log(&apos;这行标记为已删除&apos;)
+  // 这行和下一行标记为已插入
+  console.log(&apos;这是第二个插入的行&apos;)
+
+  return &apos;这行使用中性的默认标记类型&apos;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;为行标记添加标签jsx {&quot;1&quot;:5} del={&quot;2&quot;:7-8} ins={&quot;3&quot;:10-12}&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;// 带标签的行标记.jsx
+&amp;lt;button
+  role=&quot;button&quot;
+  {...props}
+  value={value}
+  className={buttonClassName}
+  disabled={disabled}
+  active={active}
+&amp;gt;
+  {children &amp;amp;&amp;amp;
+    !active &amp;amp;&amp;amp;
+    (typeof children === &apos;string&apos; ? &amp;lt;span&amp;gt;{children}&amp;lt;/span&amp;gt; : children)}
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;在单独行上添加长标签&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;jsx {&quot;1. Provide the value prop here:&quot;:5-6} del={&quot;2. Remove the disabled and active states:&quot;:8-10} ins={&quot;3. Add this to render the children inside the button:&quot;:12-15}&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 带标签的行标记.jsx
+&amp;lt;button
+  role=&quot;button&quot;
+  {...props}
+
+  value={value}
+  className={buttonClassName}
+
+  disabled={disabled}
+  active={active}
+&amp;gt;
+
+  {children &amp;amp;&amp;amp;
+    !active &amp;amp;&amp;amp;
+    (typeof children === &apos;string&apos; ? &amp;lt;span&amp;gt;{children}&amp;lt;/span&amp;gt; : children)}
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;使用类似 diff 的语法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;+这行将标记为已插入
+-这行将标记为已删除
+这是常规行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;--- a/README.md
++++ b/README.md
+@@ -1,3 +1,4 @@
++这是一个实际的 diff 文件
+-所有内容将保持未修改状态
+ 也不会删除任何空白字符
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;结合语法高亮和类似 diff 的语法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;  function thisIsJavaScript() {
+    // 整个代码块将作为 JavaScript 高亮，
+    // 我们仍然可以为其添加 diff 标记！
+-   console.log(&apos;要移除的旧代码&apos;)
++   console.log(&apos;全新闪亮的代码!&apos;)
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;标记行内的特定文本&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;function demo() {
+  // Mark any given text inside lines
+  return &apos;Multiple matches of the given text are supported&apos;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;正则表达式&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;console.log(&apos;The words yes and yep will be marked.&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;转义正斜杠&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;echo &quot;Test&quot; &amp;gt; /home/test.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;选择行内标记类型 (mark, ins, del)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;function demo() {
+  console.log(&apos;These are inserted and deleted marker types&apos;);
+  // The return statement uses the default marker type
+  return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;自动换行&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/key-features/word-wrap/&quot;&gt;自动换行&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;按代码块配置自动换行&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;// Example with wrap
+function getLongString() {
+  return &apos;This is a very long string that will most probably not fit into the available space unless the container is extremely wide&apos;
+  // 这是一个非常长的字符串，除非容器极其宽，否则很可能无法适应可用空间(启用)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;// Example with wrap=false
+function getLongString() {
+  return &apos;This is a very long string that will most probably not fit into the available space unless the container is extremely wide&apos;
+  // 这是一个非常长的字符串，除非容器极其宽，否则很可能无法适应可用空间(禁用)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;配置换行行的缩进&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;// Example with preserveIndent (enabled by default)
+function getLongString() {
+  return &apos;This is a very long string that will most probably not fit into the available space unless the container is extremely wide&apos;
+  // 这是一个非常长的字符串，除非容器极其宽，否则很可能无法适应可用空间(启用)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;// Example with preserveIndent=false
+function getLongString() {
+  return &apos;This is a very long string that will most probably not fit into the available space unless the container is extremely wide&apos;
+  // 这是一个非常长的字符串，除非容器极其宽，否则很可能无法适应可用空间(禁用)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;可折叠部分&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/plugins/collapsible-sections/&quot;&gt;可折叠部分&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 所有这些样板设置代码将被折叠
+import { someBoilerplateEngine } from &apos;@example/some-boilerplate&apos;
+import { evenMoreBoilerplate } from &apos;@example/even-more-boilerplate&apos;
+
+const engine = someBoilerplateEngine(evenMoreBoilerplate())
+
+// 这部分代码默认可见
+engine.doSomething(1, 2, 3, calcFn)
+
+function calcFn() {
+  // 可以有多个折叠部分
+  const a = 1
+  const b = 2
+  const c = a + b
+
+  // 这将保持可见
+  console.log(`计算结果: ${a} + ${b} = ${c}`)
+  return c
+}
+
+// 从这到代码块末尾的所有代码将再次被折叠
+engine.closeConnection()
+engine.freeMemory()
+engine.shutdown({ reason: &apos;示例样板代码结束&apos; })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;行号&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://expressive-code.com/plugins/line-numbers/&quot;&gt;行号&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;按代码块显示行号&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;// 这个代码块将显示行号
+console.log(&apos;来自第 2 行的问候!&apos;)
+console.log(&apos;我在第 3 行&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;// 这个代码块禁用了行号
+console.log(&apos;你好?&apos;)
+console.log(&apos;抱歉，你知道我在第几行吗?&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;更改起始行号&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;console.log(&apos;来自第 5 行的问候!&apos;)
+console.log(&apos;我在第 6 行&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Fuwari 简单使用指南</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/guide/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/guide/</guid><description>如何使用此博客模板</description><pubDate>Mon, 01 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面图片来源: &lt;a href=&quot;https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg&quot;&gt;来源&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此博客模板基于 &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt; 构建。本指南未提及的内容，您可以在 &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro 文档&lt;/a&gt; 中找到答案。&lt;/p&gt;
+&lt;h2&gt;文章的前言部分 (Front-matter)&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 我的第一篇博客文章
+published: 2023-09-09
+description: 这是我的新 Astro 博客的第一篇文章
+image: ./cover.jpg
+tags: [示例标签1, 示例标签2]
+category: 前端开发
+draft: false
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Attribute&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章的标题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;published&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章发布的日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章的简短描述。在首页显示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;image&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The cover image path of the post.&amp;lt;br/&amp;gt;1. Start with &lt;code&gt;http://&lt;/code&gt; or &lt;code&gt;https://&lt;/code&gt;: Use web image&amp;lt;br/&amp;gt;2. Start with &lt;code&gt;/&lt;/code&gt;: For image in &lt;code&gt;public&lt;/code&gt; dir&amp;lt;br/&amp;gt;3. With none of the prefixes: Relative to the markdown file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章的标签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章的分类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;draft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;如果文章仍是草稿，则不会显示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;image翻译:
+文章的封面图片路径。
+1. 以 http:// 或 https:// 开头：使用网络图片
+2. 以 / 开头：位于 public 目录中的图片
+3. 无前缀：相对于 markdown 文件的路径
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;文章文件的存放位置&lt;/h2&gt;
+&lt;p&gt;您的文章文件应放置在&lt;code&gt;src/content/posts/&lt;/code&gt; 目录下。您也可以创建子目录来更好地组织文章和资源文件。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src/content/posts/
+├── post-1.md
+└── post-2/
+    ├── cover.png
+    └── index.md
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Markdown 示例</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/markdown/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/markdown/</guid><description>一个简单的 Markdown 博客文章示例</description><pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;一级标题&lt;/h1&gt;
+&lt;p&gt;段落之间用空行分隔。&lt;/p&gt;
+&lt;p&gt;第二段落。&lt;em&gt;斜体&lt;/em&gt;、&lt;strong&gt;粗体&lt;/strong&gt;和&lt;code&gt;等宽字体&lt;/code&gt;。项目列表看起来像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个项目&lt;/li&gt;
+&lt;li&gt;那个项目&lt;/li&gt;
+&lt;li&gt;另一个项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意 --- 不考虑星号 --- 实际文本内容从第4列开始。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;块引用是
+这样写的。&lt;/p&gt;
+&lt;p&gt;如果你喜欢，它们可以
+跨多个段落。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用3个破折号表示长破折号。使用2个破折号表示范围（例如，&quot;全部在第12--14章&quot;）。三个点...将被转换为省略号。
+支持Unicode。☺&lt;/p&gt;
+&lt;h2&gt;二级标题&lt;/h2&gt;
+&lt;p&gt;这是一个编号列表：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;再次注意实际文本如何从第4列开始（距离左侧4个字符）。这是一个代码示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 让我重申...
+for i in 1 .. 10 { do-something(i) }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如您所猜，缩进4个空格。顺便说一下，您可以使用分隔块来代替缩进块：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;define foobar() {
+    print &quot;Welcome to flavor country!&quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（这样更容易复制和粘贴）。您可以选择标记分隔块以便Pandoc进行语法高亮：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import time
+# 快，数到十！
+for i in range(10):
+    # （但不要*太*快）
+    time.sleep(0.5)
+    print i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;三级标题&lt;/h3&gt;
+&lt;p&gt;现在是一个嵌套列表：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First, get these ingredients:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;carrots&lt;/li&gt;
+&lt;li&gt;celery&lt;/li&gt;
+&lt;li&gt;lentils&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Boil some water.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dump everything in the pot and follow
+this algorithm:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; find wooden spoon
+ uncover pot
+ stir
+ cover pot
+ balance wooden spoon precariously on pot handle
+ wait 10 minutes
+ goto first step (or shut off burner when done)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Do not bump wooden spoon or it will fall.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;再次注意文本如何始终对齐4空格缩进（包括上面继续第3项的最后一行）。&lt;/p&gt;
+&lt;p&gt;Here&apos;s a link to &lt;a href=&quot;http://foo.bar&quot;&gt;a website&lt;/a&gt;, to a &lt;a href=&quot;local-doc.html&quot;&gt;local
+doc&lt;/a&gt;, and to a &lt;a href=&quot;#an-h2-header&quot;&gt;section heading in the current
+doc&lt;/a&gt;. Here&apos;s a footnote [^1].&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;这是一个指向网站的链接，指向本地文档的链接，以及指向当前文档中章节标题的链接&lt;/code&gt; &lt;code&gt;这是一个脚注&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;[^1]: Footnote text goes here.
+&lt;code&gt;这是一个脚注&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;表格可以看起来像这样:&lt;/p&gt;
+&lt;p&gt;(这个用不了 : Fuwari 主题使用的是标准 Markdown 解析器，不直接支持 Pandoc 特有的极简表格语法（如无竖线的表格）,这部分我用代码块括起来，不用看)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;size material color
+
+---
+
+9 leather brown
+10 hemp canvas natural
+11 glass transparent
+
+Table: Shoes, their sizes, and what they&apos;re made of
+
+(The above is the caption for the table.) Pandoc also supports
+multi-line tables:
+
+---
+
+keyword text
+
+---
+
+red Sunsets, apples, and
+other red or reddish
+things.
+
+green Leaves, grass, frogs
+and other things it&apos;s
+not easy being.
+
+---
+
+接下来是一条水平分割线。
+
+---
+
+这是一个定义列表：
+
+苹果
+: 适合做苹果酱。
+橙子
+: 柑橘类！
+西红柿
+: &quot;tomato&quot;中没有&quot;e&quot;。
+
+同样，文本缩进4个空格。（在每个术语/定义对之间放一个空行以使内容更分散。）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;标准markdown下的表格文档为:&lt;/p&gt;
+&lt;h2&gt;基础表格&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;姓名&lt;/th&gt;
+&lt;th&gt;年龄&lt;/th&gt;
+&lt;th&gt;职业&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;张三&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;设计师&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;李四&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;开发者&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;王五&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;产品经理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;带对齐方式的表格&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;左对齐内容&lt;/th&gt;
+&lt;th&gt;居中对齐内容&lt;/th&gt;
+&lt;th&gt;右对齐内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;文本1&lt;/td&gt;
+&lt;td&gt;文本2&lt;/td&gt;
+&lt;td&gt;数值1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;长文本示例&lt;/td&gt;
+&lt;td&gt;居中文本&lt;/td&gt;
+&lt;td&gt;12345&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这是一个&quot;行块&quot;：&lt;/p&gt;
+&lt;p&gt;| 第一行
+| 第二行
+| 第三行&lt;/p&gt;
+&lt;p&gt;图像可以这样指定：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[//]: # (![example image]&amp;amp;#40;./demo-banner.png &quot;An exemplary image&quot;&amp;amp;#41;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;行内数学方程这样插入：$\omega = d\phi / dt$。显示数学应该独占一行并用双美元符号括起来：&lt;/p&gt;
+&lt;p&gt;$$I = \int \rho R^{2} dV$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{equation*}
+\pi
+=3.1415926535
+;8979323846;2643383279;5028841971;6939937510;5820974944
+;5923078164;0628620899;8628034825;3421170679;\ldots
+\end{equation*}
+$$&lt;/p&gt;
+&lt;p&gt;And note that you can backslash-escape any punctuation characters which you wish to be displayed literally, ex.: &lt;code&gt;foo&lt;/code&gt;, &lt;em&gt;bar&lt;/em&gt;, etc.
+&lt;code&gt;请注意，您可以用反斜杠转义任何希望按字面显示的标点字符，例如：&lt;/code&gt;foo&lt;code&gt;、*bar*等。&lt;/code&gt;&lt;/p&gt;
+</content:encoded></item><item><title>在文章中嵌入视频</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/video/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/video/</guid><description>本文演示如何在博客文章中嵌入视频。</description><pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;只需从 YouTube 或其他平台复制嵌入代码，然后粘贴到 markdown 文件中即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 在文章中嵌入视频
+published: 2023-10-19
+// ...
+---
+
+&amp;lt;iframe 
+    width=&quot;100%&quot; 
+    height=&quot;468&quot; 
+    src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; 
+    title=&quot;YouTube 视频播放器&quot; 
+    frameborder=&quot;0&quot; 
+    allowfullscreen&amp;gt;
+&amp;lt;/iframe&amp;gt;
+
+# 属性有下面这些
+# &amp;lt;iframe 
+#   width=&quot;100%&quot; 
+#   height=&quot;400&quot; 
+#   src=&quot;https://www.youtube.com/embed/视频ID&quot; 
+#   title=&quot;视频标题&quot;
+#   frameborder=&quot;0&quot; 
+#   allowfullscreen&amp;gt;
+# &amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;YouTube&lt;/h2&gt;
+&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube 视频播放器&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
+&lt;h2&gt;Bilibili&lt;/h2&gt;
+&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&amp;amp;p=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&amp;gt; &amp;lt;/iframe&amp;gt;&lt;/p&gt;
+</content:encoded></item></channel></rss>

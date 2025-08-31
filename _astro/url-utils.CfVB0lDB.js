@@ -1,0 +1,1 @@
+import"./zh_TW.EWYoPUR2.js";function u(o,e){const r=o.replace(/^\/|\/$/g,"").toLowerCase(),t=e.replace(/^\/|\/$/g,"").toLowerCase();return r===t}function n(...o){return o.join("/").replace(/\/+/g,"/")}function c(o){return a(`/posts/${o}/`)}function a(o){return n("","/ForestBlog-Source/",o)}export{c as g,u as p,a as u};

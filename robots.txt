@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_astro/
+
+Sitemap: https://derckhanna.github.io/ForestBlog-Source/sitemap-index.xml
