@@ -1,0 +1,59 @@
+# 工作流的名称，会在 GitHub Actions 界面显示
+name: Deploy Astro Site to GitHub Pages
+
+# 定义触发工作流的事件
+on:
+  # 当发生推送事件时触发
+  push:
+    # 仅当推送到 "main" 分支时触发
+    # 如果你的默认分支是 master，请修改为 branches: [ "master" ]
+    branches: [ "main" ]
+
+# 定义工作流中的任务
+jobs:
+  # 任务ID，可以自定义
+  build-and-deploy:
+    # 指定任务运行的环境：最新版本的 Ubuntu 系统
+    runs-on: ubuntu-latest
+    
+    # 定义任务中的步骤序列
+    steps:
+      # 步骤 1: 检出（下载）私有仓库 (ForestBlog-Source) 的源代码
+      - name: Checkout source code  # 步骤名称，在日志中显示
+        uses: actions/checkout@v4   # 使用官方 checkout Action 的第4版
+
+      # 步骤 2: 设置 Node.js 环境 (使用你本地的 v22.11.0 版本)
+      - name: Setup Node.js  # 步骤名称
+        uses: actions/setup-node@v4  # 使用官方 setup-node Action
+        with:  # 传递给 Action 的参数
+          node-version: '22.11.0'  # 指定 Node.js 版本，与你本地版本一致
+          cache: 'pnpm'  # 缓存 pnpm 依赖包，显著加速后续构建过程
+
+      # 步骤 3: 安装 pnpm 包管理器 (确保工作流环境中包含 pnpm)
+      - name: Setup pnpm  # 步骤名称
+        uses: pnpm/action-setup@v2  # 使用 pnpm 官方提供的 Action
+        with:  # 传递给 Action 的参数
+          version: '9.14.4'  # 指定 pnpm 版本，与你本地 pnpm 版本一致
+
+      # 步骤 4: 安装项目依赖包
+      - name: Install dependencies  # 步骤名称
+        run: pnpm install  # 执行 pnpm install 命令安装 package.json 中的依赖
+
+      # 步骤 5: 构建 Astro 项目 (生成静态文件到默认的 'dist' 目录)
+      - name: Build Astro project  # 步骤名称
+        run: pnpm run build  # 执行 pnpm run build，此命令会执行 astro build
+
+      # 步骤 6: 将构建产物 (dist目录) 部署到公开仓库 Pages-Repo
+      - name: Deploy to Public Repo (Pages-Repo)  # 步骤名称
+        uses: peaceiris/actions-gh-pages@v3  # 使用流行的部署 Action
+        with:  # 传递给 Action 的参数
+          github_token: ${{ secrets.PAT_TOKEN }}  # 使用存储在仓库 Secrets 中的 PAT_TOKEN，这是访问权限的凭证
+          external_repository: DerckHanna/Pages-Repo  # 目标公开仓库的用户名/仓库名
+          publish_branch: main  # 推送到公开仓库的哪个分支 (例如: main, gh-pages)
+          publish_dir: ./dist  # Astro 默认的构建输出目录，包含生成的静态文件
+          force_orphan: true  # 建议开启，保持公开仓库的提交历史简洁，每次都是单次提交
+          keep_files: false  # 部署时完全覆盖目标分支，删除旧文件，确保内容最新
+
+      # 步骤 7: 可选 - 输出部署成功信息（在日志中显示成功消息）
+      - name: Echo success message  # 步骤名称
+        run: echo "✅ Astro site was successfully deployed to GitHub Pages!"  # 输出成功信息
