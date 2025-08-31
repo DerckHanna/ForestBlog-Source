@@ -1,6 +1,5 @@
 name: Deploy Fuwari to Pages-Repo
 
-# 当代码推送到仓库A的main分支时触发
 on:
   push:
     branches: [ main ]
@@ -9,60 +8,51 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 拉取私有仓库A的代码
       - name: Checkout ForestBlog-Source
         uses: actions/checkout@v4
         with:
-          submodules: true  # 确保拉取所有子模块（如果Fuwari主题使用）
+          submodules: true
 
-      # 设置Node.js环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x  # Fuwari推荐的Node版本
-          cache: 'pnpm'       # 缓存pnpm依赖以加速构建
+          node-version: 20.x
+          cache: 'pnpm'
 
-      # 安装pnpm包管理器
+      # 改进pnpm安装步骤，确保正确添加到PATH
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4  # 使用最新版本的action
         with:
-          version: latest
+          version: 8  # 明确指定pnpm版本
+          run_install: false  # 暂不安装依赖
 
-      # 安装项目依赖
+      # 验证pnpm是否安装成功并显示版本
+      - name: Verify pnpm installation
+        run: |
+          pnpm --version
+          echo "PNPM_HOME=$PNPM_HOME"
+          echo "$PNPM_HOME" >> $GITHUB_PATH  # 确保pnpm在PATH中
+
       - name: Install dependencies
         run: pnpm install
 
-      # 构建Fuwari项目（生成静态文件到dist目录）
       - name: Build Fuwari site
         run: pnpm run build
 
-      # 配置SSH密钥用于访问公开仓库B
       - name: Setup SSH key for Pages-Repo
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-      # 将构建产物推送到公开仓库B的gh-pages分支
       - name: Deploy to Pages-Repo
         run: |
-          # 进入构建产物目录
           cd dist
-          
-          # 初始化git仓库并配置用户信息
           git init
           git config --global user.name "DerckHanna"
           git config --global user.email "2261629229@qq.com"
-          
-          # 关联公开仓库B
           git remote add origin git@github.com:DerckHanna/Pages-Repo.git
-          
-          # 创建并切换到gh-pages分支（GitHub Pages推荐分支）
           git checkout -b gh-pages
-          
-          # 提交构建产物
           git add .
           git commit -m "Auto deploy from ForestBlog-Source: $(date +'%Y-%m-%d %H:%M:%S')"
-          
-          # 推送到公开仓库B的gh-pages分支
           git push -f origin gh-pages
     
