@@ -8,10 +8,10 @@ import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeComponents from "rehype-components"; /* Render the custom directive content */
+import rehypeComponents from "rehype-components";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
-import remarkDirective from "remark-directive"; /* Handle directives */
+import remarkDirective from "remark-directive";
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
@@ -24,13 +24,12 @@ import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
-// https://astro.build/config
 export default defineConfig({
-	// 1. 修改为你的 GitHub Pages 根域名（不带仓库名）
-	site: "https://derckhanna.github.io",
-	// 2. 修改为你的仓库名，前后斜杠必须保留（区分大小写！）
-	base: "/Pages-Repo",
-	// 其他配置完全不变，保留原样
+	// 核心修改1：仓库A的GitHub Pages完整地址
+	site: "https://derckhanna.github.io/ForestBlog-Source/",
+	// 核心修改2：仓库A的名称（必须与GitHub仓库名一致，区分大小写）
+	base: "/ForestBlog-Source/",
+	// 其他配置保持不变
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
