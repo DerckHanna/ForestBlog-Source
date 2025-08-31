@@ -17,27 +17,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
-          cache: 'npm'  # 暂时使用npm缓存，避免pnpm缓存冲突
+          cache: 'pnpm'  # 明确使用pnpm缓存，对应pnpm-lock.yaml
 
-      # 关键改进：通过npm安装pnpm（更可靠，确保加入PATH）
+      # 检查pnpm-lock.yaml是否存在（确保依赖锁文件有效）
+      - name: Verify pnpm lock file exists
+        run: |
+          if [ ! -f "pnpm-lock.yaml" ]; then
+            echo "Error: pnpm-lock.yaml not found. Please run 'pnpm install' locally to generate it."
+            exit 1
+          fi
+
+      # 通过npm安装pnpm（确保环境可用）
       - name: Install pnpm via npm
         run: |
-          npm install -g pnpm  # 全局安装pnpm
-          pnpm --version  # 验证安装
-          which pnpm  # 显示pnpm安装路径（用于调试）
-          echo "PNPM_PATH=$(which pnpm | sed 's/\/pnpm$//')" >> $GITHUB_ENV  # 提取pnpm路径
-
-      # 强制将pnpm路径添加到PATH
-      - name: Add pnpm to PATH
-        run: |
-          echo "$PNPM_PATH" >> $GITHUB_PATH
-          echo "Current PATH: $PATH"  # 显示当前PATH（用于调试）
-
-      # 再次验证pnpm是否可用
-      - name: Verify pnpm installation again
-        run: |
+          npm install -g pnpm
           pnpm --version
-          which pnpm
 
       - name: Install dependencies
         run: pnpm install
@@ -48,6 +42,7 @@ jobs:
       - name: Setup SSH key for Pages-Repo
         uses: webfactory/ssh-agent@v0.5.4
         with:
+          # VS Code提示"DEPLOY_KEY无效"是正常的（本地无此变量），不影响实际运行
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Deploy to Pages-Repo
