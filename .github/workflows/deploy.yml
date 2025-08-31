@@ -18,37 +18,34 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.11.0'
-          cache: 'pnpm'
+          # 先移除 cache 配置，等 pnpm 安装成功后再添加
 
-      # 步骤 3: 安装 pnpm - 修正版本号写法
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9.14.4  # 移除引号，使用数字格式
+      # 步骤 3: 通过 corepack 启用 pnpm（Node.js 16+ 内置）
+      - name: Enable pnpm with corepack
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.14.4 --activate
+          echo "PNPM version: $(pnpm --version)"
 
-      # 步骤 4: 验证 pnpm 安装 - 新增步骤
-      - name: Verify pnpm installation
-        run: pnpm --version
-
-      # 步骤 5: 安装项目依赖
+      # 步骤 4: 安装项目依赖
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile  # 使用冻结的lockfile确保一致性
+        run: pnpm install --frozen-lockfile
 
-      # 步骤 6: 构建 Astro 项目
+      # 步骤 5: 构建 Astro 项目
       - name: Build Astro project
         run: pnpm run build
 
-      # 步骤 7: 部署到公开仓库
+      # 步骤 6: 部署到公开仓库
       - name: Deploy to Public Repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAT_TOKEN }}
           external_repository: DerckHanna/Pages-Repo
-          publish_branch: gh-pages  # 使用 gh-pages 分支
+          publish_branch: gh-pages
           publish_dir: ./dist
           force_orphan: true
           keep_files: false
 
-      # 步骤 8: 输出成功信息
+      # 步骤 7: 输出成功信息
       - name: Echo success message
         run: echo "✅ 部署成功！网站已更新。"
