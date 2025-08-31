@@ -28,7 +28,8 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 export default defineConfig({
 	// 1. 修改为你的 GitHub Pages 根域名（不带仓库名）
 	site: "https://derckhanna.github.io",
-
+	// 2. 修改为你的仓库名，前后斜杠必须保留（区分大小写！）
+	base: "/Pages-Repo",
 	// 其他配置完全不变，保留原样
 	trailingSlash: "always",
 	integrations: [
