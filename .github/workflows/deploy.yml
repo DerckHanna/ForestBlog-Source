@@ -8,74 +8,41 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 步骤1：先拉取代码（必须在所有依赖操作前）
       - name: Checkout ForestBlog-Source
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # 步骤2：同时设置Node.js和pnpm（官方action，确保顺序正确）
+      - name: Setup Node.js and pnpm
+        uses: pnpm/action-setup@v4  # 使用官方action，自动处理安装和路径
         with:
-          node-version: 20.x
+          node-version: 20.x        # 同时指定Node版本
+          pnpm-version: 8           # 明确pnpm版本
+          run_install: false        # 暂不自动安装依赖
 
-      # 关键改进：使用pnpm官方安装脚本，强制安装并获取绝对路径
-      - name: Install pnpm with official script
+      # 步骤3：验证pnpm是否可用（安装后立即检查）
+      - name: Verify pnpm installation
         run: |
-          # 下载并执行官方安装脚本
-          curl -fsSL https://get.pnpm.io/install.sh | sh -
-          
-          # 显示pnpm安装路径（通常在~/.local/share/pnpm/pnpm）
-          echo "PNPM installation path:"
-          which pnpm
-          
-          # 强制将pnpm路径添加到环境变量
-          echo "export PATH=\$HOME/.local/share/pnpm:\$PATH" >> ~/.bashrc
-          source ~/.bashrc
-          
-          # 验证安装是否成功
-          echo "pnpm version:"
-          pnpm --version || echo "pnpm still not found"
-          
-          # 记录pnpm的绝对路径（用于后续步骤直接调用）
-          echo "PNPM_EXE=$(which pnpm)" >> $GITHUB_ENV
+          pnpm --version  # 确认pnpm可被识别
+          which pnpm      # 显示安装路径
 
-      # 验证环境变量中的pnpm路径
-      - name: Verify pnpm path
-        run: |
-          echo "PNPM_EXE: $PNPM_EXE"
-          if [ -z "$PNPM_EXE" ]; then
-            echo "Error: PNPM_EXE is not set"
-            exit 1
-          fi
-          if [ ! -f "$PNPM_EXE" ]; then
-            echo "Error: pnpm executable not found at $PNPM_EXE"
-            exit 1
-          fi
-          # 确认文件可执行
-          chmod +x "$PNPM_EXE"
-          "$PNPM_EXE" --version
+      # 步骤4：安装项目依赖（此时pnpm已确保可用）
+      - name: Install dependencies
+        run: pnpm install
 
-      # 检查锁文件
-      - name: Verify pnpm lock file
-        run: |
-          if [ ! -f "pnpm-lock.yaml" ]; then
-            echo "Error: pnpm-lock.yaml not found. Generate it with 'pnpm install' locally first."
-            exit 1
-          fi
+      # 步骤5：构建项目
+      - name: Build Fuwari site
+        run: pnpm run build
 
-      # 使用绝对路径安装依赖
-      - name: Install dependencies with absolute path
-        run: "$PNPM_EXE install"
-
-      # 使用绝对路径构建项目
-      - name: Build with absolute path
-        run: "$PNPM_EXE run build"
-
-      - name: Setup SSH key
+      # 步骤6：配置SSH密钥
+      - name: Setup SSH key for Pages-Repo
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
+      # 步骤7：部署到公开仓库
       - name: Deploy to Pages-Repo
         run: |
           cd dist
