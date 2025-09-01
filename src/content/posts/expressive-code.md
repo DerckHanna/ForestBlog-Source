@@ -2,8 +2,8 @@
 title: Expressive Code 代码展示示例
 published: 2024-04-10
 description: 使用 Expressive Code 在 Markdown 中展示代码块的效果
-tags: [Markdown, 博客, 示例]
-category: 示例
+tags: []
+category: Fuwari文章Translate
 draft: false
 ---
 

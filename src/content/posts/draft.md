@@ -1,8 +1,8 @@
 ---
 title: 草稿示例
 published: 2022-07-01
-tags: [Markdown, 博客, 示例]
-category: 示例
+tags: []
+category: Fuwari文章Translate
 draft: true
 ---
 
