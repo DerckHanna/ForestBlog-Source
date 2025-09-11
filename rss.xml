@@ -1,57 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>元学习</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E5%85%83%E5%AD%A6%E4%B9%A0/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E5%85%83%E5%AD%A6%E4%B9%A0/</guid><pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&quot;元学习&quot;模型&lt;/h1&gt;
-&lt;p&gt;元学习的目的便是 &lt;strong&gt;“学会如何学习”&lt;/strong&gt;，回答下面的问题，构建一个高效、自适应、可持续的个人学习系统(针对学习规划中的某一学习内容)&lt;/p&gt;
-&lt;h2&gt;--- 学习前解决↓---&lt;/h2&gt;
-&lt;h2&gt;一、明确学习动机与目标&lt;/h2&gt;
-&lt;p&gt;元学习的起点 —— 先明确 “学习的价值锚点”，避免盲目跟风&lt;/p&gt;
-&lt;p&gt;:::note[回答提问]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;我学习这个的&lt;strong&gt;核心动机&lt;/strong&gt;是什么？&lt;/li&gt;
-&lt;li&gt;这个学习目标和我的&lt;strong&gt;长期规划 / 当下需求&lt;/strong&gt;是否匹配？&lt;/li&gt;
-&lt;li&gt;我需要学到 “什么程度” 才算 “学会”？&lt;/li&gt;
-&lt;li&gt;这个目标是否需要&lt;strong&gt;拆解&lt;/strong&gt;？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;h2&gt;二、学习方法与策略&lt;/h2&gt;
-&lt;p&gt;元学习的核心环节 —— 避免 “用低效方法硬熬”&lt;/p&gt;
-&lt;p&gt;:::note[回答提问]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;我当前(准备)用的学习方法，&lt;strong&gt;能高效达到目标吗&lt;/strong&gt;？&lt;/li&gt;
-&lt;li&gt;这个领域有没有 “更适配的经典学习策略”？&lt;/li&gt;
-&lt;li&gt;我需要先补哪些 &lt;strong&gt;“基础能力”&lt;/strong&gt;，才能避免卡壳？&lt;/li&gt;
-&lt;li&gt;遇到 “学不会的难点” 时，我是该“死磕” 还是 “换思路”？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;h2&gt;--- 学习后解决↓---&lt;/h2&gt;
-&lt;h2&gt;三、学习过程监控&lt;/h2&gt;
-&lt;p&gt;元学习的 “实时校准环节”—— 避免 “学了一半才发现方向偏了” 或 “进度失控”。核心是 “动态追踪学习状态，及时修正偏差”。&lt;/p&gt;
-&lt;p&gt;:::note[回答提问]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;我每天 / 每周的学习进度，是否符合之前的计划？&lt;/li&gt;
-&lt;li&gt;学习时我是否容易分心？(用物理量化,不要用抽象词概括)&lt;/li&gt;
-&lt;li&gt;学完一个章节后，我能 “立刻回忆起核心内容” 吗？(若合上书就忘，说明 “输入时没主动思考”)&lt;/li&gt;
-&lt;li&gt;这个阶段的学习，让我 “有成就感” 还是 “焦虑”？（若持续焦虑，可能是目标定太高或方法不对，需降低短期目标或换更简单的入门内容）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;h2&gt;四、学习结果评估&lt;/h2&gt;
-&lt;p&gt;元学习的 “效果验证环节”—— 避免 “自我感觉学会了，实际不会用”。核心是 “用‘输出’或‘解决问题’验证学习效果”，而非 “看了多少课、记了多少笔记”。&lt;/p&gt;
-&lt;p&gt;:::note[回答提问]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;我能通过 “&lt;strong&gt;输出&lt;/strong&gt;” 证明自己学会了吗？&lt;/li&gt;
-&lt;li&gt;这个知识 / 技能，我能 “和已有的知识联系起来” 吗？&lt;/li&gt;
-&lt;li&gt;如果&lt;strong&gt;用 1-10 分打分&lt;/strong&gt;，我对这个知识 / 技能的掌握程度是多少？分数低的原因是什么？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;h2&gt;五、学习迭代优化&lt;/h2&gt;
-&lt;p&gt;元学习的 “循环升级环节”—— 让每次学习都成为 “下一次学习的经验”，避免 “重复踩同一个坑”。核心是 “总结本次学习的经验教训，优化下一次的学习策略”。&lt;/p&gt;
-&lt;p&gt;:::note[回答提问]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;这次学习中，哪些做法 “有效”，下次可以保留？&lt;/li&gt;
-&lt;li&gt;哪些做法 “无效”，下次需要改掉？&lt;/li&gt;
-&lt;li&gt;如果重新学一遍，我会 “调整哪些环节”？&lt;/li&gt;
-&lt;li&gt;这次学习，我的 “学习能力”（比如专注力、理解力、复盘能力）有没有提升？怎么提升的？（比如通过 “每天复盘”，发现自己的 “问题分析能力” 变强了）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-</content:encoded></item><item><title>Proposed-学习规划</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</guid><description>How to study</description><pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;C++后端开发工程师学习路线图&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>Proposed-学习规划</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</guid><description>How to study</description><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;C++后端开发工程师学习路线图&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一份以就业为导向的渐进式学习指南&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -326,6 +273,59 @@
 &lt;h2&gt;✅ 总结&lt;/h2&gt;
 &lt;p&gt;这份路线图的核心是：&lt;strong&gt;“先语言核心，后系统应用；先底层基础，后高层框架”&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;记住，&lt;strong&gt;深度优于广度&lt;/strong&gt;。彻底理解一个&lt;code&gt;epoll&lt;/code&gt;的原理，远比泛泛地了解十个框架更有价值。祝你学有所成，拿到心仪的Offer！&lt;/p&gt;
+</content:encoded></item><item><title>元学习</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E5%85%83%E5%AD%A6%E4%B9%A0/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E5%85%83%E5%AD%A6%E4%B9%A0/</guid><pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&quot;元学习&quot;模型&lt;/h1&gt;
+&lt;p&gt;元学习的目的便是 &lt;strong&gt;“学会如何学习”&lt;/strong&gt;，回答下面的问题，构建一个高效、自适应、可持续的个人学习系统(针对学习规划中的某一学习内容)&lt;/p&gt;
+&lt;h2&gt;--- 学习前解决↓---&lt;/h2&gt;
+&lt;h2&gt;一、明确学习动机与目标&lt;/h2&gt;
+&lt;p&gt;元学习的起点 —— 先明确 “学习的价值锚点”，避免盲目跟风&lt;/p&gt;
+&lt;p&gt;:::note[回答提问]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我学习这个的&lt;strong&gt;核心动机&lt;/strong&gt;是什么？&lt;/li&gt;
+&lt;li&gt;这个学习目标和我的&lt;strong&gt;长期规划 / 当下需求&lt;/strong&gt;是否匹配？&lt;/li&gt;
+&lt;li&gt;我需要学到 “什么程度” 才算 “学会”？&lt;/li&gt;
+&lt;li&gt;这个目标是否需要&lt;strong&gt;拆解&lt;/strong&gt;？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;h2&gt;二、学习方法与策略&lt;/h2&gt;
+&lt;p&gt;元学习的核心环节 —— 避免 “用低效方法硬熬”&lt;/p&gt;
+&lt;p&gt;:::note[回答提问]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我当前(准备)用的学习方法，&lt;strong&gt;能高效达到目标吗&lt;/strong&gt;？&lt;/li&gt;
+&lt;li&gt;这个领域有没有 “更适配的经典学习策略”？&lt;/li&gt;
+&lt;li&gt;我需要先补哪些 &lt;strong&gt;“基础能力”&lt;/strong&gt;，才能避免卡壳？&lt;/li&gt;
+&lt;li&gt;遇到 “学不会的难点” 时，我是该“死磕” 还是 “换思路”？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;h2&gt;--- 学习后解决↓---&lt;/h2&gt;
+&lt;h2&gt;三、学习过程监控&lt;/h2&gt;
+&lt;p&gt;元学习的 “实时校准环节”—— 避免 “学了一半才发现方向偏了” 或 “进度失控”。核心是 “动态追踪学习状态，及时修正偏差”。&lt;/p&gt;
+&lt;p&gt;:::note[回答提问]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我每天 / 每周的学习进度，是否符合之前的计划？&lt;/li&gt;
+&lt;li&gt;学习时我是否容易分心？(用物理量化,不要用抽象词概括)&lt;/li&gt;
+&lt;li&gt;学完一个章节后，我能 “立刻回忆起核心内容” 吗？(若合上书就忘，说明 “输入时没主动思考”)&lt;/li&gt;
+&lt;li&gt;这个阶段的学习，让我 “有成就感” 还是 “焦虑”？（若持续焦虑，可能是目标定太高或方法不对，需降低短期目标或换更简单的入门内容）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;h2&gt;四、学习结果评估&lt;/h2&gt;
+&lt;p&gt;元学习的 “效果验证环节”—— 避免 “自我感觉学会了，实际不会用”。核心是 “用‘输出’或‘解决问题’验证学习效果”，而非 “看了多少课、记了多少笔记”。&lt;/p&gt;
+&lt;p&gt;:::note[回答提问]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我能通过 “&lt;strong&gt;输出&lt;/strong&gt;” 证明自己学会了吗？&lt;/li&gt;
+&lt;li&gt;这个知识 / 技能，我能 “和已有的知识联系起来” 吗？&lt;/li&gt;
+&lt;li&gt;如果&lt;strong&gt;用 1-10 分打分&lt;/strong&gt;，我对这个知识 / 技能的掌握程度是多少？分数低的原因是什么？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;h2&gt;五、学习迭代优化&lt;/h2&gt;
+&lt;p&gt;元学习的 “循环升级环节”—— 让每次学习都成为 “下一次学习的经验”，避免 “重复踩同一个坑”。核心是 “总结本次学习的经验教训，优化下一次的学习策略”。&lt;/p&gt;
+&lt;p&gt;:::note[回答提问]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这次学习中，哪些做法 “有效”，下次可以保留？&lt;/li&gt;
+&lt;li&gt;哪些做法 “无效”，下次需要改掉？&lt;/li&gt;
+&lt;li&gt;如果重新学一遍，我会 “调整哪些环节”？&lt;/li&gt;
+&lt;li&gt;这次学习，我的 “学习能力”（比如专注力、理解力、复盘能力）有没有提升？怎么提升的？（比如通过 “每天复盘”，发现自己的 “问题分析能力” 变强了）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
 </content:encoded></item><item><title>Markdown 扩展功能</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/markdown-extended/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/markdown-extended/</guid><description>了解更多关于 Fuwari 中的 Markdown 功能</description><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;GitHub 仓库卡片&lt;/h2&gt;
 &lt;p&gt;您可以添加动态卡片链接到 GitHub 仓库，页面加载时，仓库信息会从 GitHub API 获取。&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;Fabrizz/MMM-OnSpotify&quot;}&lt;/p&gt;
@@ -890,4 +890,101 @@ published: 2023-10-19
 &lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube 视频播放器&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
 &lt;h2&gt;Bilibili&lt;/h2&gt;
 &lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&amp;amp;p=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&amp;gt; &amp;lt;/iframe&amp;gt;&lt;/p&gt;
+</content:encoded></item><item><title>LeetcodeProblem-55</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/leetcodeproblem/leetcodeproblem-55/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/leetcodeproblem/leetcodeproblem-55/</guid><description>力扣第55题</description><pubDate>Wed, 24 Jan 1900 00:00:00 GMT</pubDate><content:encoded>&lt;hr /&gt;
+&lt;h2&gt;题目描述&lt;/h2&gt;
+&lt;p&gt;给定一个非负整数数组 &lt;code&gt;nums&lt;/code&gt;，你最初位于数组的第一个下标。数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
+&lt;p&gt;判断你是否能够到达最后一个下标，如果可以，返回 &lt;code&gt;true&lt;/code&gt;；否则，返回 &lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
+&lt;h3&gt;示例 1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;输入：&lt;/strong&gt; &lt;code&gt;nums = [2,3,1,1,4]&lt;/code&gt;&lt;br /&gt;
+&lt;strong&gt;输出：&lt;/strong&gt; &lt;code&gt;true&lt;/code&gt;&lt;br /&gt;
+&lt;strong&gt;解释：&lt;/strong&gt; 可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。&lt;/p&gt;
+&lt;h3&gt;示例 2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;输入：&lt;/strong&gt; &lt;code&gt;nums = [3,2,1,0,4]&lt;/code&gt;&lt;br /&gt;
+&lt;strong&gt;输出：&lt;/strong&gt; &lt;code&gt;false&lt;/code&gt;&lt;br /&gt;
+&lt;strong&gt;解释：&lt;/strong&gt; 无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0，所以永远不可能到达最后一个下标。&lt;/p&gt;
+&lt;h3&gt;提示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 10^4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= nums[i] &amp;lt;= 10&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;题解&lt;/h2&gt;
+&lt;h3&gt;思路一：贪心&lt;/h3&gt;
+&lt;p&gt;如果一个位置&lt;code&gt;pos&lt;/code&gt;是可达的,那么从该位置到&lt;code&gt;pos + num[pos]&lt;/code&gt;的位置都是可达的&lt;/p&gt;
+&lt;p&gt;考虑维护一个变量&lt;code&gt;Max&lt;/code&gt;,用于记录当遍历数组至某一位置时，最远的可达位置&lt;/p&gt;
+&lt;p&gt;遍历数组，每到达一个新的位置&lt;code&gt;i&lt;/code&gt;:
+- 若&lt;code&gt;Max &amp;lt; i&lt;/code&gt;,那么&lt;code&gt;return false&lt;/code&gt;
+- 更新&lt;code&gt;Max&lt;/code&gt;,&lt;code&gt;Max = max(Max, i + nums[i])&lt;/code&gt;
+- 若&lt;code&gt;Max &amp;gt;= nums.length - 1&lt;/code&gt;(下标从0开始),那么&lt;code&gt;return true&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;时间复杂度&lt;/h4&gt;
+&lt;p&gt;$$O(N)$$&lt;/p&gt;
+&lt;h4&gt;代码&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution {
+public:
+    bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+        int Max = 0;
+        for(int i = 0; i &amp;lt; nums.size(); i++){
+            if(Max &amp;lt; i)return false;
+            Max = max(Max, i + nums[i]);
+            if(Max &amp;gt;= nums.size() - 1)return true;
+        }
+        return false;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;思路二：动态规划&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;考虑一个一维数组&lt;code&gt;dp&lt;/code&gt;，遍历数组到某一位置&lt;code&gt;i&lt;/code&gt;时,&lt;code&gt;dp[i]&lt;/code&gt;的定义为&lt;code&gt;在位置i能走的最大步数&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设计&lt;code&gt;dp&lt;/code&gt;数组的状态转移方程，遍历数组，当前位置的&lt;code&gt;dp[i]&lt;/code&gt;为&lt;code&gt;dp[i-1]再走一步的剩余步数&lt;/code&gt;和&lt;code&gt;nums[i]&lt;/code&gt;中的最大值，那么有状态转移方程&lt;code&gt;dp[i] = max(dp[i-1] - 1, nums[i])&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;边界条件(初始化)：&lt;code&gt;dp[0] = nums[0]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遍历数组，到新位置即进行状态转移，更新&lt;code&gt;dp[i]&lt;/code&gt;,之后判断&lt;code&gt;dp[i]&lt;/code&gt;是否为0，是，则无法前进了，&lt;code&gt;return false&lt;/code&gt;,不是则继续遍历，若最终退出了遍历循环，那么说明角色可以到达终点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;考虑优化：当前状态之和上一次的状态有关，可以使用滚动变量进行优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;时间复杂度&lt;/h4&gt;
+&lt;p&gt;$$O(N)$$&lt;/p&gt;
+&lt;h4&gt;代码&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution {
+public:
+    bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+        int dp = -1;// 第1步的上一步不存在，初始化为-1
+        for(int i = 0; i &amp;lt; nums.size(); i++)
+        {
+            if(!dp)return false;
+            dp = max(dp - 1, nums[i]); 
+        }
+        return true;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::caution[注意]
+&lt;strong&gt;dp判0的语句必须放置在状态更新的语句之后:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当&lt;code&gt;i = nums.size()-1&lt;/code&gt;时，若&lt;code&gt;nums[i] = 0&lt;/code&gt;并且&lt;code&gt;dp = 1&lt;/code&gt;,状态更新之后,在最后一个位置能走的最大步数为0，&lt;code&gt;return false&lt;/code&gt;,但是此时我们已经到终点,于是结果出错
+:::&lt;/p&gt;
+&lt;h3&gt;DFS的错误&lt;/h3&gt;
+&lt;h4&gt;爆搜思路&lt;/h4&gt;
+&lt;p&gt;由于此题的数量级为1e4,数据较小，那么尝试从起点开始搜索，尝试去到距离起点最远可达处x，再从x的最远可达处进行尝试，最终看能否到达终点，这样依次尝试至最靠近起点的位置，即可求得答案&lt;/p&gt;
+&lt;h4&gt;时间复杂度&lt;/h4&gt;
+&lt;p&gt;当数组呈现&lt;code&gt;{n}、{n-1}……、{2}、{1}、{0}、{0}&lt;/code&gt;的模样时，时间复杂度将达到$O(n!)$&lt;/p&gt;
+&lt;p&gt;:::tip[e.g.]
+如5、4、3、2、1、0、0&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从起点&lt;code&gt;5&lt;/code&gt;出发，到&lt;code&gt;0&lt;/code&gt;,无法前进&lt;/li&gt;
+&lt;li&gt;退一步，到达&lt;code&gt;1&lt;/code&gt;,&lt;code&gt;1&lt;/code&gt;前进一步到达&lt;code&gt;0&lt;/code&gt;,无法前进&lt;/li&gt;
+&lt;li&gt;退一步，到达&lt;code&gt;2&lt;/code&gt;,&lt;code&gt;2&lt;/code&gt;前进两步到达&lt;code&gt;0&lt;/code&gt;,无法前进,……以此类推
+对于&lt;code&gt;5&lt;/code&gt;,它会使得角色到&lt;code&gt;4&lt;/code&gt;、&lt;code&gt;3&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;0&lt;/code&gt;
+对于&lt;code&gt;4&lt;/code&gt;,它会使得角色到&lt;code&gt;3&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;0&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;以此类推&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
 </content:encoded></item></channel></rss>
