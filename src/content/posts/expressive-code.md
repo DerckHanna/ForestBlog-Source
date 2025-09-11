@@ -134,7 +134,9 @@ function demo() {
 ```
 
 #### 在单独行上添加长标签
+
 `jsx {"1. Provide the value prop here:":5-6} del={"2. Remove the disabled and active states:":8-10} ins={"3. Add this to render the children inside the button:":12-15}`
+
 ```jsx {"1. Provide the value prop here:":5-6} del={"2. Remove the disabled and active states:":8-10} ins={"3. Add this to render the children inside the button:":12-15}
 // 带标签的行标记.jsx
 <button
