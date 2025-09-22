@@ -1,4 +1,232 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>Proposed-学习规划</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</guid><description>How to study</description><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;C++后端开发工程师学习路线图&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>Pointers vs References in C++ A Practical Guide</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/cconceptclarifier/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/pointers-vs-references-in-c-a-practical-guide/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/cconceptclarifier/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/pointers-vs-references-in-c-a-practical-guide/</guid><description>C++指针和引用实用指南</description><pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;指针与引用&lt;/h2&gt;
+&lt;h3&gt;引用&lt;/h3&gt;
+&lt;p&gt;引用不是变量，不占用储存空间，由编译器实现。引用是给变量取的别名，它必须初始化且初始化之后无法改变其指定的对象&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a = 100;
+int&amp;amp; ref = a; // 一个名为ref的int类型的引用的声明，必须初始化，它现在是a的别名
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;指针&lt;/h3&gt;
+&lt;p&gt;指针是一种变量,也是用于储存值的，而指针所储存的为地址，指针需要指明指针类型，用于表明其指向变量的类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int* ptr; // 一个名为ptr的int类型指针的声明
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;空指针&lt;/h3&gt;
+&lt;p&gt;空指针有很两种，&lt;code&gt;NULL&lt;/code&gt;(&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;(char*) 0&lt;/code&gt;)、&lt;code&gt;nullptr&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;NULL&lt;/code&gt;空指针&lt;/h4&gt;
+&lt;p&gt;NULL是一种定义宏，通常就是&lt;code&gt;0&lt;/code&gt;(或者是(void*)0,但是这种情况极少，一般是C语言的用法，取决于编译器)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#define NULL 0
+// 或
+#define NULL (void*) 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::tip[宏]
+宏可以简单理解为“取别名”,它在编译前的预处理中被执行，将别名全部替换为指定文本
+:::&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NULL的本质是&lt;code&gt;(int) 0&lt;/code&gt;，是整型而不是一个指针，这实际上就会导致一些问题&lt;/p&gt;
+&lt;p&gt;NULL重载函数二义性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+void function(int input)
+{
+    cout &amp;lt;&amp;lt; &quot;The input is of int type&quot; &amp;lt;&amp;lt; endl;
+    return;
+}
+
+void function(int* input)
+{
+    cout &amp;lt;&amp;lt; &quot;The input is of int* type&quot; &amp;lt;&amp;lt; endl;
+    return;
+}
+
+int main()
+{
+    function(NULL);  // 从从 NULL 转换为非指针类型“int”[-Wconversion-null]
+    return 0;    
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;那么其实你可以猜测会输出什么——输出了：“The input is of int type”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(void* 0)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显式定义了指针，但是依然能导致重载错误等错误，不再讨论&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nullptr&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C++11后引入的特性,现代空指针。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nullptr&lt;/code&gt;的类型是&lt;code&gt;std::nullptr_t&lt;/code&gt;,并不是定义宏，这个类型可以隐式转换为任何其他指针类型&lt;/p&gt;
+&lt;p&gt;在C++11之后，任何的空指针都应该这样写，现代而安全&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+void function(int input)
+{
+    cout &amp;lt;&amp;lt; &quot;The input is of int type&quot; &amp;lt;&amp;lt; endl;
+    return;
+}
+
+void function(int* input)
+{
+    cout &amp;lt;&amp;lt; &quot;The input is of int* type&quot; &amp;lt;&amp;lt; endl;
+    return;
+}
+
+int main()
+{
+    function(nullptr);
+    return 0;    
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;现在将输出:“The input is of int* type”&lt;/p&gt;
+&lt;h2&gt;指针与引用相关的运算符&lt;/h2&gt;
+&lt;h3&gt;运算符**&amp;amp;**：&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;取地址运算符&lt;/p&gt;
+&lt;p&gt;作用：顾名思义，获取变量在内存中的地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a = 100;
+int* p = &amp;amp;a; // 现在指针p中储存的是a的地址,&amp;amp;a的作用就是获取a的地址
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;运算符&lt;strong&gt;Star&lt;/strong&gt;: &lt;code&gt;*&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;解引用运算符&lt;/p&gt;
+&lt;p&gt;作用：通过指针访问或修改该指针所指向的内存地址中存储的值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int n = 100;
+int* ptr = &amp;amp;n; // 声明指针ptr
+*ptr = 10;     // 通过解引用指针修改n,现在n = 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;运算符&lt;strong&gt;arrows&lt;/strong&gt;：&lt;code&gt;-&amp;gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;用于通过指针访问结构体或类成员。它等价于指针先解引用，再加上&lt;code&gt;.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;为什么需要此运算符？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为解引用运算符&lt;code&gt;*&lt;/code&gt;的优先级比点号运算符&lt;code&gt;.&lt;/code&gt;高，如果要用它们，那么会写为&lt;code&gt;(*pointer).member&lt;/code&gt;,不够简洁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
+using namespace std;
+
+struct Node
+{
+    int x;
+    int y;
+}node;
+
+int main()
+{
+    node.x = 1;
+    node.y = 2;    
+    Node* ptr = &amp;amp;node;
+    
+    cout &amp;lt;&amp;lt; ptr-&amp;gt;x &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; ptr-&amp;gt;y &amp;lt;&amp;lt; endl;
+    return 0;    
+}
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Traversal of data structures</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/others/traversal-of-data-structures/traversal-of-data-structures/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/others/traversal-of-data-structures/traversal-of-data-structures/</guid><description>数据结构的各种遍历方式</description><pubDate>Sun, 21 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;数据结构的遍历&lt;/h2&gt;
+</content:encoded></item><item><title>Hash tables for C++</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/datastructure/hashtable/hashtable/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/datastructure/hashtable/hashtable/</guid><description>C++哈希表</description><pubDate>Tue, 16 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;hr /&gt;
+&lt;h2&gt;哈希表的定义&lt;/h2&gt;
+&lt;p&gt;哈希表又称散列表，是一种支持快速插入查询、组织数据通过哈希函数进行的数据结构&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;哈希表的原理&lt;/h2&gt;
+&lt;p&gt;哈希表通过哈希函数将键转化为桶地址，由此对桶进行操作&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;哈希表的相关概念&lt;/h2&gt;
+&lt;h3&gt;a. 哈希函数&lt;/h3&gt;
+&lt;p&gt;哈希函数不是某一个特定的高级函数，就是一个用于将键转换为桶的地址的函数&lt;/p&gt;
+&lt;p&gt;:::tip[e.g.]
+比如 有数组&lt;code&gt;{1, 2, 4, 1902, 8}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;而我们的哈希函数就可以是&lt;code&gt;y = x % 3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;code&gt;y&lt;/code&gt;也可以记作&lt;code&gt;hash(x)&lt;/code&gt;,就是就是计算出的桶的地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;HashTable1.png&quot; alt=&quot;图片无法显示&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;可以发现&lt;code&gt;1和4&lt;/code&gt;、&lt;code&gt;2和8&lt;/code&gt;经过哈希函数产生的桶地址相同，这是发生了&lt;strong&gt;哈希冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;哈希冲突&lt;/strong&gt;会降低哈希表的性能，我们需要尽量避免这种情况，先作了解
+:::&lt;/p&gt;
+&lt;h4&gt;哈希函数性能&lt;/h4&gt;
+&lt;p&gt;一个好的哈希表具有下面的特点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确定性：使得键和桶地址一一对应，也就是一个键的桶地址完全取决于它自己本身&lt;/li&gt;
+&lt;li&gt;简单性：哈希函数不能太复杂，避免降低哈希表的性能&lt;/li&gt;
+&lt;li&gt;均匀性：哈希函数越能让键值在桶中分布的随机和均匀，哈希函数的性能越好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对应哈希表，最理想的情况是键和桶完全一一对应&lt;/p&gt;
+&lt;h3&gt;b. 负载因子&lt;/h3&gt;
+&lt;p&gt;负载因子是已利用的桶与总桶数的比值，一般情况下哈希表不会使用全部桶&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们需要尽量提高桶数组的空间利用率，负载因子不能太低&lt;/li&gt;
+&lt;li&gt;负载因子太高也容易产生哈希冲突，也要控制哈希因子不能太高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::note[合理的负载因子]
+比较合理的负载因子值为0.7
+:::&lt;/p&gt;
+&lt;h3&gt;c. 哈希冲突&lt;/h3&gt;
+&lt;p&gt;一般哈希函数会压缩键的范围，桶地址的范围一般会远远小于键的范围，不同的键映射到相同的桶的情况叫做哈希冲突，很难避免&lt;/p&gt;
+&lt;h4&gt;解决哈希冲突的一些方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;线性试探法&lt;/li&gt;
+&lt;li&gt;链地址法&lt;/li&gt;
+&lt;li&gt;再哈希法&lt;/li&gt;
+&lt;li&gt;公共溢出区法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;哈希表特征&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;特征&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;键值对结构&lt;/td&gt;
+&lt;td&gt;存储的基本单元是(key, value)对。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;键的唯一性&lt;/td&gt;
+&lt;td&gt;键是唯一的，重复插入会覆盖旧值。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;哈希函数访问&lt;/td&gt;
+&lt;td&gt;通过哈希函数计算键的存储位置，而非比较。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;无序性&lt;/td&gt;
+&lt;td&gt;元素顺序不可预测。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;冲突处理&lt;/td&gt;
+&lt;td&gt;必须有能力解决多个键映射到同一位置的冲突。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;动态扩容&lt;/td&gt;
+&lt;td&gt;根据负载因子自动调整底层数组大小。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;平均O(1)性能&lt;/td&gt;
+&lt;td&gt;在理想条件下，操作非常高效。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;补充:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;唯一性：一般说对相同的键再值插入会覆盖原有值，但是实际上键的重复插入方式不同会产生不同逻辑&lt;/li&gt;
+&lt;li&gt;哈希函数访问：通过比较计算键的储存位置的数据结构有单调序列、二叉搜索树，跳表等&lt;/li&gt;
+&lt;li&gt;无序性：哈希表内存中开劈的是连续空间，那为什么说哈希表有无序性？实际无序性指键值对的排列顺序在逻辑上是没有意义的、不可预测的,比如键为&lt;code&gt;1&lt;/code&gt;,但是通过哈希函数映射至桶地址&lt;code&gt;1e5&lt;/code&gt;,这种顺序跟键本身的值无关&lt;/li&gt;
+&lt;li&gt;动态扩容：一般是哈希表中的元素大于负载因子，就会触发了扩容，扩容的时间复杂度为$O(n)$,&lt;code&gt;n&lt;/code&gt;为元素的数量,桶数组的大小通常翻倍并最近的的质数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;哈希表相关问题&lt;/h2&gt;
+&lt;h3&gt;1. 要是键和桶地址一一对应，就是最理想的哈希表，这不就是数组吗？为什么还需要哈希表?&lt;/h3&gt;
+&lt;p&gt;数组有其局限性:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当键的取值范围极大，但是键的数量很少时，数组会产生巨大的空间浪费&lt;/li&gt;
+&lt;li&gt;下标是整数，当键值类型变得复杂就无法使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::tip[e.g.]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当键为float时，数组明显就无法使用了&lt;/li&gt;
+&lt;li&gt;比如有一组数据&lt;code&gt;{1, 1e10, 1e10……}&lt;/code&gt;(共有100个数据)，如果使用数组统计这一份数据中各数字的出现次数，那么大小至少需要1e10的空间，这显然是不合理的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;为了解决数组的局限性，我们使用哈希表:&lt;strong&gt;哈希表用微小的性能损失和少量的空间浪费，换来了无与伦比的通用性和平均情况下O(1)时间复杂度的卓越性能&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;2. 为什么桶数组的大小一般要是整数？&lt;/h3&gt;
+&lt;p&gt;哈希函数在确定哈希表的桶索引时，最终几乎总是通过取模运算来完成的,这个取模值一般就是数组大小&lt;/p&gt;
+&lt;p&gt;$$index = hash(key) % M$$ (hash()指产生哈希值)&lt;/p&gt;
+</content:encoded></item><item><title>Proposed-学习规划</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/%E6%8B%9F-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</guid><description>How to study</description><pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;C++后端开发工程师学习路线图&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一份以就业为导向的渐进式学习指南&lt;/p&gt;
 &lt;/blockquote&gt;
