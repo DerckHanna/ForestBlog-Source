@@ -29,3 +29,6 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# 忽略特定的 Data Structures 目录
+/src/content/posts/Data Structures & Algorithms/Data Structures/
