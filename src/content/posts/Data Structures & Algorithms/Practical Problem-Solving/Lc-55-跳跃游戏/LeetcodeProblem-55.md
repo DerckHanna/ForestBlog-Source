@@ -1,9 +1,9 @@
 ---
 title: LeetcodeProblem-55
-published: 0000-00-55
-description: '力扣第55题'
+published: 2025-09-10
+description: '力扣第55题个人题解'
 image: "./LeetcodeLogo.png"
-tags: [Leetcode]
+tags: ['Lc']
 category: 'Leetcode'
 draft: false 
 ---

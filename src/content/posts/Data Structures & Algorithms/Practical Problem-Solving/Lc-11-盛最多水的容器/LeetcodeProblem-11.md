@@ -1,9 +1,9 @@
 ---
 title: LeetcodeProblem-11
-published: 0000-00-56
-description: '力扣第11题'
+published: 2025-09-12
+description: '力扣第11题个人题解'
 image: "./LeetcodeLogo.png"
-tags: [Leetcode]
+tags: ['Lc']
 category: 'Leetcode'
 draft: false 
 ---

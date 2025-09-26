@@ -2,9 +2,9 @@
 title: Fuwari 简单使用指南
 published: 2024-04-01
 description: "如何使用此博客模板"
-image: "./cover.jpeg"
+image: "./Fuwari-BlogGuide.jpeg"
 tags: []
-category: Fuwari文章Translate
+category: Blog Guide
 draft: false
 ---
 

@@ -1,14 +1,13 @@
 ---
-title: 元学习
+title: meta-learning-model
 published: 2025-09-01
 description: ''
 image: ''
-tags: [元学习]
-category: 'How to study'
+tags: []
+category: 'Study Planning & Methods'
 draft: false 
 lang: ''
 ---
-
 
 # "元学习"模型
 

@@ -5,10 +5,9 @@ updated: 2024-11-29
 description: '了解更多关于 Fuwari 中的 Markdown 功能'
 image: ''
 tags: []
-category: 'Fuwari文章Translate'
-draft: false 
+category: Blog Guide
+draft: false
 ---
-
 ## GitHub 仓库卡片
 
 您可以添加动态卡片链接到 GitHub 仓库，页面加载时，仓库信息会从 GitHub API 获取。

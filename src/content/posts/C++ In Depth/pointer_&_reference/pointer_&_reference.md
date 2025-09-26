@@ -1,10 +1,10 @@
 ---
-title: Pointers vs References in C++ A Practical Guide
+title: C++|指针_and_引用
 published: 2025-09-22
-description: 'C++指针和引用实用指南'
-image: "./Pointer.png"
-tags: ['C++', '辨析']
-category: 'ConceptClarify概念明晰'
+description: '快速明晰指针和引用，顺便区分(&)(*)(->)'
+image: "./pointer_&_reference.png"
+tags: []
+category: 'C++ In Depth'
 draft: false 
 ---
 

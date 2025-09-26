@@ -1,11 +1,11 @@
 ---
-title: Hash tables for C++
+title: C++|哈希表的原理和应用
 published: 2025-09-16
-description: 'C++哈希表'
-image: "./ForHashPic.png"
-tags: ['C++', '数据结构', '哈希表']
-category: '数据结构'
-draft: false 
+description: '哈希表的学习内容总结'
+image: "./principles-and-applications-of-hash-tables1.png"
+tags: ['HashTable','Datastruct']
+category: 'Data Structures'
+draft: false
 ---
 
 ---
@@ -35,7 +35,7 @@ draft: false
 
 其中`y`也可以记作`hash(x)`,就是就是计算出的桶的地址
 
-![图片无法显示](HashTable1.png)
+![图片无法显示](principles-and-applications-of-hash-tables2.png)
 
 可以发现`1和4`、`2和8`经过哈希函数产生的桶地址相同，这是发生了**哈希冲突**
 

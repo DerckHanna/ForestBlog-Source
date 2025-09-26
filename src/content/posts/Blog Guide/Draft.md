@@ -2,8 +2,8 @@
 title: 草稿示例
 published: 2022-07-01
 tags: []
-category: Fuwari文章Translate
-draft: true
+category: Blog Guide
+draft: false
 ---
 
 ## 本文是草稿
