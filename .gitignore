@@ -30,5 +30,5 @@ yarn.lock
 .idea
 *.iml
 
-# 忽略特定的 Data Structures 目录
-/src/content/posts/Data Structures & Algorithms/Data Structures/
+# 忽略所有 Data Structures 文件夹
+**/Data Structures/**
