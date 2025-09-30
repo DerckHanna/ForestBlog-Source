@@ -56,4 +56,3 @@ draft: false
 | end()   | iterator | 获取指向尾后位置的迭代器   | 所有STL容器                       | 获取指向尾后位置的迭代器 |
 | front() | 元素引用 | 直接访问首元素 | vector, deque, list, forward_list | 未定义行为      |
 | back()  | 元素引用 | 直接访问尾元素 | vector, deque, list               | 未定义行为      |
-
