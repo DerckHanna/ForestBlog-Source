@@ -8,6 +8,9 @@ category: 'C++ In Depth'
 draft: false 
 ---
 
+> 封面来源: [次元小镇](https://dimtown.com/50821.html)
+> 画师：日本插画师みふる
+
 ## 起始终末函数们
 
 本文讨论的函数为:

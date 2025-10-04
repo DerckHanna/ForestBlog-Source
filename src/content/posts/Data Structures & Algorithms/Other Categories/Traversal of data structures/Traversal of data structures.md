@@ -1,11 +1,14 @@
 ---
-title: 数据结构遍历的各种方式总结
+title: Traversal of data structures
 published: 2025-09-21
-description: '不同方式/数据结构的遍历方式写法'
-image: "./Traversal of data structures.jpg"
+description: '数据结构遍历的各种写法'
+image: "./Traversal of data structures.png"
 tags: ['Datastruct', 'Traversal']
-category: 'Data Structures'
+category: 'Data 
 draft: false 
 ---
+
+> 封面来源: [次元小镇](https://dimtown.com/50821.html)
+> 画师：日本插画师みふる
 
 ## 数据结构的遍历
