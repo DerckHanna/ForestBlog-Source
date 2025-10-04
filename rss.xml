@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>C++|起始终末函数们的区别</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/from_inception_to_demise/from_inception_to_demise/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/from_inception_to_demise/from_inception_to_demise/</guid><description>区分begin-begin、cbegin-cend、front-back,并进行纵向对比</description><pubDate>Mon, 29 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;起始终末函数们&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>Average Case Time Complexity</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</guid><description>平均时间复杂度分析计算</description><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/84456.html&quot;&gt;次元小镇&lt;/a&gt;
+画师：日本插画师Uom&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;平均时间复杂度的定义&lt;/h2&gt;
+&lt;p&gt;平均情况时间复杂度 = 所有&lt;code&gt;可能输入的时间复杂度&lt;/code&gt;的&lt;strong&gt;期望值&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;期望值：在概率论和统计学中，期望值（或数学期望、或均值，亦简称期望，物理学中称为期待值）是指在一个离散性随机变量试验中&lt;code&gt;每次可能结果的概率乘以其结果的总和&lt;/code&gt;。(来自：&lt;a href=&quot;https://baike.baidu.com/item/%E6%9C%9F%E6%9C%9B%E5%80%BC/8664642&quot;&gt;百度百科-期望值&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;平均时间复杂度计算&lt;/h2&gt;
+&lt;h3&gt;基本公式&lt;/h3&gt;
+&lt;p&gt;平均时间复杂度的数学期望为：&lt;/p&gt;
+&lt;p&gt;$$E(T) = \sum_{i=1}^{n} P(i) \cdot T(i)$$&lt;/p&gt;
+&lt;h4&gt;变量说明&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;$E(T)$：期望运行时间复杂度&lt;/li&gt;
+&lt;li&gt;$P(i)$：第 $i$ 种输入情况的概率&lt;/li&gt;
+&lt;li&gt;$T(i)$：第 $i$ 种输入情况的执行时间&lt;/li&gt;
+&lt;li&gt;$n$：所有可能的输入情况总数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;线性查找实例&lt;/h2&gt;
+&lt;p&gt;对于线性查找算法：&lt;/p&gt;
+&lt;p&gt;以查找不含重复元素的&lt;code&gt;vector&amp;lt;int&amp;gt; a&lt;/code&gt;中的某个元素为例，如果找到了，则返回对应元素的索引&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int Find_(int p)
+{
+    for(int i = 0; i &amp;lt; a.size(); i++)
+    {
+        if(a[i] == p){
+            return i;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;假设数组中有&lt;code&gt;n&lt;/code&gt;个元素，需要查找的元素出现在数组每个位置的几率相等且和不出现在数组中的概率相等&lt;/p&gt;
+&lt;p&gt;那么有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元素出现在第一个位置的概率为 $1 / (n + 1)$&lt;/li&gt;
+&lt;li&gt;元素出现在第二个位置的概率为 $1 / (n + 1)$&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;li&gt;元素出现在第n个位置的概率为 $1 / (n + 1)$&lt;/li&gt;
+&lt;li&gt;元素没有在数组中的概率为 $1 / (n + 1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$E(T)$$&lt;/p&gt;
+&lt;p&gt;$$= 1 \cdot 1 / (n + 1) + 2 \cdot  1 / (n + 1) + …… + n \cdot  1 / (n + 1) + n \cdot  1 / (n + 1)$$&lt;/p&gt;
+&lt;p&gt;$$= \sum_{i=1}^{n} \frac{i}{n+1} + \frac{n}{n+1}$$&lt;/p&gt;
+&lt;p&gt;$$= \frac{n(n + 3)}{2(n + 1)}$$&lt;/p&gt;
+&lt;p&gt;实际计算时可忽略常数，只看数量级&lt;/p&gt;
+&lt;p&gt;从结果来看，$E(T)$等同于$O(n)$&lt;/p&gt;
+</content:encoded></item><item><title>C++|起始终末函数们的区别</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/from_inception_to_demise/from_inception_to_demise/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/from_inception_to_demise/from_inception_to_demise/</guid><description>区分begin-begin、cbegin-cend、front-back,并进行纵向对比</description><pubDate>Mon, 29 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/50821.html&quot;&gt;次元小镇&lt;/a&gt;
+画师：日本插画师みふる&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;起始终末函数们&lt;/h2&gt;
 &lt;p&gt;本文讨论的函数为:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;begin()&lt;/code&gt;和&lt;code&gt;end()&lt;/code&gt;&lt;/li&gt;
@@ -106,7 +158,11 @@
 &lt;li&gt;&lt;strong&gt;从具体到一般&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;避免过于宽泛的标签&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>C++|指针_and_引用</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/pointer__reference/pointer__reference/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/pointer__reference/pointer__reference/</guid><description>快速明晰指针和引用，顺便区分(&amp;)(*)(-&gt;)</description><pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;指针与引用&lt;/h2&gt;
+</content:encoded></item><item><title>C++|指针_and_引用</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/pointer__reference/pointer__reference/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/c-in-depth/pointer__reference/pointer__reference/</guid><description>快速明晰指针和引用，顺便区分(&amp;)(*)(-&gt;)</description><pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/50821.html&quot;&gt;次元小镇&lt;/a&gt;
+画师：日本插画师みふる&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;指针与引用&lt;/h2&gt;
 &lt;h3&gt;引用&lt;/h3&gt;
 &lt;p&gt;引用不是变量，不占用储存空间，由编译器实现。引用是给变量取的别名，它必须初始化且初始化之后无法改变其指定的对象&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;int a = 100;
@@ -225,8 +281,15 @@ int main()
     return 0;    
 }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>数据结构遍历的各种方式总结</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/other-categories/traversal-of-data-structures/traversal-of-data-structures/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/other-categories/traversal-of-data-structures/traversal-of-data-structures/</guid><description>不同方式/数据结构的遍历方式写法</description><pubDate>Sun, 21 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;数据结构的遍历&lt;/h2&gt;
-</content:encoded></item><item><title>LeetcodeProblem-11</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/leetcodeproblem-11/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/leetcodeproblem-11/</guid><description>力扣第11题个人题解</description><pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;hr /&gt;
+</content:encoded></item><item><title>Traversal of data structures</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/other-categories/traversal-of-data-structures/traversal-of-data-structures/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/other-categories/traversal-of-data-structures/traversal-of-data-structures/</guid><description>数据结构遍历的各种写法</description><pubDate>Sun, 21 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/50821.html&quot;&gt;次元小镇&lt;/a&gt;
+画师：日本插画师みふる&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;数据结构的遍历&lt;/h2&gt;
+</content:encoded></item><item><title>LeetcodeProblem-11</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/leetcodeproblem-11/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/leetcodeproblem-11/</guid><description>力扣第11题个人题解</description><pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面：Leetcode Logo&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
 &lt;h2&gt;11. 盛最多水的容器&lt;/h2&gt;
 &lt;h3&gt;题目描述&lt;/h3&gt;
 &lt;p&gt;给定一个长度为 &lt;code&gt;n&lt;/code&gt; 的整数数组 &lt;code&gt;height&lt;/code&gt; 。有 &lt;code&gt;n&lt;/code&gt; 条垂线，第 &lt;code&gt;i&lt;/code&gt; 条线的两个端点是 &lt;code&gt;(i, 0)&lt;/code&gt; 和 &lt;code&gt;(i, height[i])&lt;/code&gt; 。&lt;/p&gt;
@@ -360,7 +423,9 @@ public:
     }
 };
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>LeetcodeProblem-55</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/leetcodeproblem-55/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/leetcodeproblem-55/</guid><description>力扣第55题个人题解</description><pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;hr /&gt;
+</content:encoded></item><item><title>LeetcodeProblem-55</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/leetcodeproblem-55/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/data-structures--algorithms/practical-problem-solving/lc-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/leetcodeproblem-55/</guid><description>力扣第55题个人题解</description><pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面：Leetcode Logo&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2&gt;55. 跳跃游戏&lt;/h2&gt;
 &lt;h3&gt;题目描述&lt;/h3&gt;
 &lt;p&gt;给你一个非负整数数组 &lt;code&gt;nums&lt;/code&gt; ，你最初位于数组的 &lt;strong&gt;第一个下标&lt;/strong&gt; 。数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
