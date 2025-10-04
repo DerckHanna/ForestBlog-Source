@@ -4,7 +4,7 @@ published: 2025-09-21
 description: '数据结构遍历的各种写法'
 image: "./Traversal of data structures.png"
 tags: ['Datastruct', 'Traversal']
-category: 'Data 
+category: 'Data'
 draft: false 
 ---
 
