@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>Average Case Time Complexity</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</guid><description>平均时间复杂度分析计算</description><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Forest</title><description>Code and Grow</description><link>https://derckhanna.github.io/ForestBlog-Source/</link><language>zh_CN</language><item><title>The distinction of sub</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/others/the-distinction-of-sub/the-distinction-of-sub/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/others/the-distinction-of-sub/the-distinction-of-sub/</guid><description>“子”的区分</description><pubDate>Sun, 12 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/50821.html&quot;&gt;次元小镇&lt;/a&gt;
+画师：日本插画师みふる&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.子数组 (Subarray)&lt;/h2&gt;
+&lt;p&gt;定义:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;连续的元素序列&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;保持原始顺序&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;从原数组中截取的一段&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 2 3 4 5
+
+1 2 3 -&amp;gt; 是子数组
+2 3 5 -&amp;gt; 不是子数组
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;2. 子序列 (Subsequence)&lt;/h2&gt;
+&lt;p&gt;定义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;不一定连续的元素序列&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;保持原始相对顺序&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;通过删除0个或多个元素得到&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 2 3 4 5
+
+1 2 3 -&amp;gt; 是子序列
+2 3 5 -&amp;gt; 是子序列
+3 2 1 -&amp;gt; 不是子序列
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;3. 子集 (Subset)&lt;/h2&gt;
+&lt;p&gt;定义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;不考虑顺序的元素集合&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;通过删除0个或多个元素得到&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;顺序可以任意排列&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;1 2 3 4 5
+
+1 2 3 -&amp;gt; 是子集
+2 3 5 -&amp;gt; 是子集
+6 6 6 -&amp;gt; 是子集
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Average Case Time Complexity</title><link>https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</link><guid isPermaLink="true">https://derckhanna.github.io/ForestBlog-Source/posts/others/average-case-time-complexity/average_case_time_complexity/</guid><description>平均时间复杂度分析计算</description><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;封面来源: &lt;a href=&quot;https://dimtown.com/84456.html&quot;&gt;次元小镇&lt;/a&gt;
 画师：日本插画师Uom&lt;/p&gt;
 &lt;/blockquote&gt;
